@@ -1,4 +1,6 @@
 # At first I will import the dataset from my computer 
+##NB. You need to upload the dataset from the position it has on your computer##
+###The dataset you need to upload is in my github repository###
 
 library(readxl)
 Life_Expetancy <- read_excel("C:/Users/Daniel/Desktop/7. semester/Teoriorienteret Historie/Digitale metoder/Life_Expetancy.xlsx")
@@ -65,7 +67,8 @@ average$lifeexp <- average$`Life expectancy`
 
 # Making the plot/figure with ggplot - ggplot2-package necessary 
 ggplot(average, aes(x=year, y=lifeexp, color=status)) +
-  labs(title = "Average life expectancy from 2000 to 2015", subtitle = "Devided in developed and developing countries")+
+  labs(title = "Average life expectancy from 2000 to 2015",
+       subtitle = "Devided in developed and developing countries")+
   xlab("Year")+
   ylab("Life expectancy")+
   geom_point(size=2, alpha=0.8)+
